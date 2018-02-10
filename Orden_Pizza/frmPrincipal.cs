@@ -97,5 +97,13 @@ namespace Orden_Pizza
                 return;
             }
         }
+
+        private void btnCalculadora_Click(object sender, EventArgs e)
+        {
+            Orden_Compra orden = OrdenCompra_Factory.Calculadora();
+
+            
+           
+        }
     }
 }

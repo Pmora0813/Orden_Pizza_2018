@@ -15,5 +15,12 @@ namespace Orden_Pizza
             Orden = new Orden_Compra(cant, pizza, pasta, tamano);
             return Orden;
         }
+
+        public static Orden_Compra Calculadora()
+        {
+            Orden_Compra orden = new Orden_Compra();
+            orden.Calculadora();
+            return orden;
+        }
     }
 }

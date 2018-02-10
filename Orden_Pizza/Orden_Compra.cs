@@ -16,6 +16,9 @@ namespace Orden_Pizza
         public ITamano Tamano { get; set; }
         List<Extra> ListaExtras { get; set; }
 
+        public Orden_Compra()
+        {
+        }
 
         public Orden_Compra(int cantidad, Pizza pizza, Pasta pasta, ITamano tamano)
         {
@@ -74,15 +77,15 @@ namespace Orden_Pizza
 
             foreach (Extra ad in this.ListaExtras)
             {
-                int costo = (int) ad;
+                int costo = (int)ad;
                 XmlElement nNombre = xmlDoc.CreateElement("EXTRA");
-                nNombre.SetAttribute("NOMBRE",ad.ToString());
-                nNombre.SetAttribute("COSTO", costo.ToString());           
-                     
+                nNombre.SetAttribute("NOMBRE", ad.ToString());
+                nNombre.SetAttribute("COSTO", costo.ToString());
+
                 nADICIONALES.AppendChild(nNombre);
-               
+
             }
-            
+
 
             XmlElement nTOTAL = xmlDoc.CreateElement("TOTAL");
             nTOTAL.InnerText = CalcularTotal().ToString("#,##0.00");
@@ -118,10 +121,15 @@ namespace Orden_Pizza
             info.FileName = "chrome.exe";
             proceso.StartInfo = info;
             proceso.Start();
+        }
 
-
-
-
+        public void Calculadora()
+        {
+            System.Diagnostics.Process proceso = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo info = new System.Diagnostics.ProcessStartInfo();
+            info.FileName = "calc.exe";
+            proceso.StartInfo = info;
+            proceso.Start();
         }
     }
 

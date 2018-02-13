@@ -271,6 +271,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.Location = new System.Drawing.Point(260, 474);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
@@ -309,7 +310,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Pizzeria Master Chef";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.npdCantidad)).EndInit();

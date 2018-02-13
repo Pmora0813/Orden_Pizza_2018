@@ -107,7 +107,7 @@ namespace Orden_Pizza
             // Transformación del XMl utilizando XSLT
             XslCompiledTransform myXslTrans = new XslCompiledTransform();
             // Carga en memoria la lectura xslt
-            myXslTrans.Load("D:\\Llave _16_GB\\I Cuatrimestre\\Progra III\\Semana 4\\Viernes\\Orden_Pizza_2018\\Orden_Pizza\\OrdenPizza.xslt");
+            myXslTrans.Load("OrdenPizza.xslt");
             // Transforma el archivo xml aun archivo HTML
             string rutaXML = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Orden_Pizza.xml";
 
